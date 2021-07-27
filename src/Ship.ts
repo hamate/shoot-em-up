@@ -5,10 +5,10 @@ export default class Ship {
   shipSrc: string = "./img/Ship5.png";
 
   drawShip(ctx: CanvasRenderingContext2D) {
-    const shipImg = new Image(72, 72);
+    const shipImg = new Image();
     shipImg.src = this.shipSrc;
     this.shipPos = [];
-    ctx.drawImage(shipImg, 0 + this.deltaX, 0 + this.deltaY, 72, 72);
+    ctx.drawImage(shipImg, 0 + this.deltaX, 0 + this.deltaY, 100, 100);
     this.shipPos.push(this.deltaX, this.deltaY);
   }
 }

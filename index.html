@@ -9,7 +9,6 @@
         height: 600px;
       }
       .main-canvas {
-        margin: 20px;
         border: 1px solid black;
       }
 
@@ -19,8 +18,9 @@
       }
     </style>
   </head>
-  <body>
+  <body style="margin: auto">
     <div class="preload-images">
+      <img id="intro" src="img/intro.jpeg">
       <img id="background" src="img/Background.png">
       <img id="ground" src="img/Ground.png">
       <img id="groundFront" src="img/GroundFront.png">
@@ -30,7 +30,7 @@
     </div>
     <div id="canvasesdiv" style="position:relative; width:800px; height:600px">
       <canvas id="background" style="z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="background"></canvas>
-      <canvas id="playground" style="margin:20px; border:1px; z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="playground"></canvas>
+      <canvas id="playground" style="border:1px; z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="playground"></canvas>
       <!-- <canvas id="layer2" style="z-index: 2; position:absolute; left:0px; top:0px;" width="720" height="720"></canvas>
       <canvas id="layer3" style="z-index: 3; position:absolute; left:0px; top:0px;" width="720" height="720"></canvas> -->
       </div>
