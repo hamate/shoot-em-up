@@ -2,8 +2,8 @@ import Background from './Background';
 import Intro from './Intro';
 import Main from './Main';
 import Ship from './Ship';
-import './styles/intro.scss'
-import './styles/main.scss'
+import './styles/intro.scss';
+import './styles/main.scss';
 
 const canvas = document.querySelector('.background') as HTMLCanvasElement;
 const ctx = canvas.getContext('2d');
@@ -18,17 +18,32 @@ const ship = new Ship();
 
 window.onload = () => {
   intro.drawIntro(ctx);
-  
+
   setTimeout(() => {
     main.drawMain(ctx);
-    // playground.hidden = false;
+
     intro.deleteText();
-    main.drawButtons(ctx);
-    // ctx.clearRect(0, 0, 800, 600)
-    // background.drawArea(ctx);
-    // ship.drawShip(ctx2);
+    main.drawButtons();
+
+    const startButton: NodeListOf<HTMLButtonElement> = document.querySelectorAll('.start-game-btn');
+    console.log(startButton);
+    
+    startButton.forEach((button: HTMLButtonElement) =>
+      button.addEventListener('click', (e: Event) => {
+        e.preventDefault();
+        main.deleteScreen();
+        intro.deleteText();
+        playground.hidden = false;
+        ctx.clearRect(0, 0, 800, 600);
+        background.drawArea(ctx);
+        ship.drawShip(ctx2);
+      })
+    );
+
   }, 2000);
 };
+
+
 
 let velY: number = 0;
 let velX: number = 0;
@@ -92,4 +107,3 @@ document.body.addEventListener('keydown', function (e: any): void {
 document.body.addEventListener('keyup', function (e: any): void {
   keys[e.keyCode] = false;
 });
-
