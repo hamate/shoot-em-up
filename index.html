@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Matt's Wanderer Game</title>
+    <title>Shoot'em Up</title>
     <style>
       body {
         width: 800px;
@@ -26,13 +26,15 @@
       <img id="groundFront" src="img/GroundFront.png">
       <img id="rocks" src="img/Rocks.png">
       <img id="nebula" src="img/nebula.png">
+      <img id="ship" src="img/Ship1.png">
+      <img id="ship" src="img/Ship3.png">
       <img id="ship" src="img/Ship5.png">
+      <img id="ship" src="img/Ship6.png">
     </div>
     <div id="canvasesdiv" style="position:relative; width:800px; height:600px">
       <canvas id="background" style="z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="background"></canvas>
-      <canvas id="playground" style="border:1px; z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="playground"></canvas>
-      <!-- <canvas id="layer2" style="z-index: 2; position:absolute; left:0px; top:0px;" width="720" height="720"></canvas>
-      <canvas id="layer3" style="z-index: 3; position:absolute; left:0px; top:0px;" width="720" height="720"></canvas> -->
+      <canvas id="ship-canvas" style="border:1px; z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="ship-canvas"></canvas>
+      <canvas id="enemy-canvas" style="border:1px; z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="enemy-canvas"></canvas>
       </div>
     <script src="bundle.js"></script>
   </body>
