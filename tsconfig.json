@@ -1,13 +1,11 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "commonjs",
-        "target": "es6",
-        "lib": ["DOM", "DOM.Iterable", "ES6", "ES2015.Iterable"]
-    },
-    "include": [
-        "./src/**/*"
-    ]
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es6",
+    "lib": ["DOM", "DOM.Iterable", "ES6", "ES2015.Iterable"]
+  },
+  "include": ["./src/**/*"]
 }

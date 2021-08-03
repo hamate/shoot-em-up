@@ -1,5 +1,5 @@
-import Star from './Star';
-import Intro from './Intro';
+import Star from "./Star";
+import Intro from "./Intro";
 
 export default class Main {
   drawMain(ctx: CanvasRenderingContext2D) {
@@ -34,13 +34,13 @@ export default class Main {
         }
         ctx.beginPath();
         ctx.arc(stars[i].x, stars[i].y, stars[i].size, 0, 360);
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = "white";
         ctx.fill();
       }
     }
 
     function update() {
-      ctx.fillStyle = 'black';
+      ctx.fillStyle = "black";
       ctx.fillRect(0, 0, 800, 600);
       animateStars();
       window.requestAnimationFrame(update);
@@ -50,31 +50,31 @@ export default class Main {
   }
 
   drawButtons() {
-    const panel = document.createElement('div');
-    panel.className = 'control-panel';
+    const panel = document.createElement("div");
+    panel.className = "control-panel";
     for (let i: number = 0; i < 4; i++) {
-      let button = document.createElement('button');
-      let span = document.createElement('span');
+      let button = document.createElement("button");
+      let span = document.createElement("span");
       span.innerHTML = `GAME${i + 1}`;
-      span.className = 'cybr-btn__glitch';
+      span.className = "cybr-btn__glitch";
       if (i < 3) {
-        button.className = 'cybr-btn start-game-btn';
+        button.className = "cybr-btn start-game-btn";
         button.innerHTML = `GAME${i + 1}`;
       } else {
-        button.className = 'cybr-btn end-game-btn';
+        button.className = "cybr-btn end-game-btn";
         button.innerHTML = `EXIT`;
       }
       button.appendChild(span);
       panel.appendChild(button);
     }
     document.body.appendChild(panel);
-    panel.style.position = 'absolute';
-    document.querySelector('.end-game-btn').addEventListener('click', () => {
-      window.location.href = 'http://nasa.gov';
+    panel.style.position = "absolute";
+    document.querySelector(".end-game-btn").addEventListener("click", () => {
+      window.location.href = "http://nasa.gov";
     });
   }
 
   deleteScreen() {
-    document.querySelector('.control-panel').remove();
+    document.querySelector(".control-panel").remove();
   }
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
 
 body {
 }
@@ -7,20 +7,37 @@ body {
   font-family: "Play", sans-serif;
   font-style: italic;
   position: absolute;
+  align-items: center;
   transform: translate(-50%, -50%);
   top: 18%;
   left: 50%;
   background: black;
-  width: 430px;
+  width: 425px;
   box-shadow: 0px 0px 10px 10px rgb(11, 10, 10);
   overflow: hidden;
+}
+
+.end-title {
+  font-family: "Play", sans-serif;
+  font-style: italic;
+  position: absolute;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  top: 35%;
+  left: 50%;
+  background: black;
+  width: 550px;
+  box-shadow: 0px 0px 10px 10px rgb(11, 10, 10);
+  overflow: hidden;
+  .glitch {
+    font-size: 92px;
+  }
 }
 
 .glitch {
   color: rgb(223, 191, 191);
   position: relative;
-  font-size: 7vw;
-  // margin: 70px 200px;
+  font-size: 70px;
   animation: glitch 5s 5s infinite;
 }
 
@@ -32,7 +49,8 @@ body {
   background: black;
   overflow: hidden;
   top: 0;
-  animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  animation: noise-1 3s linear infinite alternate-reverse,
+    glitch 5s 5.05s infinite;
 }
 
 .glitch::after {
@@ -45,7 +63,6 @@ body {
   top: 0;
   animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
 }
-
 
 @keyframes noise-1 {
   $steps: 30;
@@ -85,13 +102,12 @@ body {
   background: repeating-linear-gradient(
     to bottom,
     transparent 0%,
-    rgba(255, 255, 255, 0.05) .5%,
+    rgba(255, 255, 255, 0.05) 0.5%,
     transparent 1%
   );
 
   animation: fudge 7s ease-in-out alternate infinite;
 }
-
 
 @keyframes fudge {
   from {
@@ -109,5 +125,3 @@ body {
   position: absolute;
   top: 0;
 }
-
-

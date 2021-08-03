@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Shoot'em Up</title>
+    <link rel="icon" type="image/png" href="./img/favicon.ico" />
     <style>
       body {
         width: 800px;
@@ -18,24 +19,94 @@
       }
     </style>
   </head>
-  <body style="margin: auto">
+  <body style="margin: auto;">
     <div class="preload-images">
-      <img id="intro" src="img/intro.jpeg">
-      <img id="background" src="img/Background.png">
-      <img id="ground" src="img/Ground.png">
-      <img id="groundFront" src="img/GroundFront.png">
-      <img id="rocks" src="img/Rocks.png">
-      <img id="nebula" src="img/nebula.png">
-      <img id="ship" src="img/Ship1.png">
-      <img id="ship" src="img/Ship3.png">
-      <img id="ship" src="img/Ship5.png">
-      <img id="ship" src="img/Ship6.png">
+      <img id="intro" src="img/intro.jpeg" />
+      <img id="ground" src="img/Ground.png" />
+      <img id="groundFront" src="img/GroundFront.png" />
+      <img id="rocks" src="img/Rocks.png" />
+      <img id="nebula" src="img/shot.png" />
+      <img id="nebula" src="img/nebula.png" />
+      <img id="ship" src="img/Ship1.png" />
+      <img id="ship" src="img/Ship3.png" />
+      <img id="ship" src="img/Ship5.png" />
+      <img id="ship" src="img/Ship6.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_1.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_10.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_11.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_2.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_3.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_4.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_5.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_6.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_7.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_8.png" />
+      <img id="ship" src="img/Explosion1/Explosion1_9.png" />
     </div>
-    <div id="canvasesdiv" style="position:relative; width:800px; height:600px">
-      <canvas id="background" style="z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="background"></canvas>
-      <canvas id="ship-canvas" style="border:1px; z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="ship-canvas"></canvas>
-      <canvas id="enemy-canvas" style="border:1px; z-index: 1; position:absolute; left:0px; top:0px;" width="800" height="600" class="enemy-canvas"></canvas>
-      </div>
+    <div
+      id="canvasesdiv"
+      style="position: relative; width: 800px; height: 600px;"
+    >
+      <canvas
+        id="background"
+        style="z-index: 1; position: absolute; left: 0px; top: 0px;"
+        width="800"
+        height="600"
+        class="background"
+      ></canvas>
+      <canvas
+        id="ship-canvas"
+        style="
+          border: 1px;
+          z-index: 1;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        "
+        width="800"
+        height="600"
+        class="ship-canvas"
+      ></canvas>
+      <canvas
+        id="enemy-canvas"
+        style="
+          border: 1px;
+          z-index: 1;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        "
+        width="800"
+        height="600"
+        class="enemy-canvas"
+      ></canvas>
+      <canvas
+        id="shot-canvas"
+        style="
+          border: 1px;
+          z-index: 1;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        "
+        width="800"
+        height="600"
+        class="shot-canvas"
+      ></canvas>
+      <canvas
+        id="explosion-canvas"
+        style="
+          border: 1px;
+          z-index: 1;
+          position: absolute;
+          left: 0px;
+          top: 0px;
+        "
+        width="800"
+        height="600"
+        class="explosion-canvas"
+      ></canvas>
+    </div>
     <script src="bundle.js"></script>
   </body>
 </html>

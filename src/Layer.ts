@@ -23,18 +23,18 @@ export default class Layer {
 
   update() {
     this.speed = this.gameSpeed * this.speedMod;
-    if(this.x <= -this.width) {
-      this.x = this.width + this.x2 - this.speed
+    if (this.x <= -this.width) {
+      this.x = this.width + this.x2 - this.speed;
     }
-    if(this.x2 <= -this.width) {
-      this.x2 = this.width + this.x - this.speed
+    if (this.x2 <= -this.width) {
+      this.x2 = this.width + this.x - this.speed;
     }
     this.x = Math.floor(this.x - this.speed);
     this.x2 = Math.floor(this.x2 - this.speed);
   }
 
-  draw(ctx: CanvasRenderingContext2D){
-    ctx.drawImage(this.image, this.x, this.y, this.width, this.height)
-    ctx.drawImage(this.image, this.x2, this.y, this.width, this.height)
+  draw(ctx: CanvasRenderingContext2D) {
+    ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+    ctx.drawImage(this.image, this.x2, this.y, this.width, this.height);
   }
 }

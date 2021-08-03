@@ -1,7 +1,7 @@
 {
-  "name": "wanderer",
+  "name": "shoot-em-up",
   "version": "1.0.0",
-  "description": "A tile map based game written in typescript",
+  "description": "A side scrolling space shooter game.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,15 +1,15 @@
-import Layer from './Layer';
+import Layer from "./Layer";
 
 export default class Background {
   drawArea(ctx: CanvasRenderingContext2D) {
     const background = new Image();
-    background.src = './img/nebula.png';
+    background.src = "./img/nebula.png";
     const rocks = new Image();
-    rocks.src = './img/Rocks.png';
+    rocks.src = "./img/Rocks.png";
     const ground = new Image();
-    ground.src = './img/Ground.png';
+    ground.src = "./img/Ground.png";
     const groundFront = new Image();
-    groundFront.src = './img/GroundFront.png';
+    groundFront.src = "./img/GroundFront.png";
 
     const layer1 = new Layer(background, 0.02);
     const layer2 = new Layer(rocks, 0.6);
@@ -18,7 +18,7 @@ export default class Background {
 
     const backgroundLayers = [layer1, layer2, layer3, layer4];
 
-    function animate():void {
+    function animate(): void {
       ctx.clearRect(0, 0, 800, 600);
       backgroundLayers.forEach((layer) => {
         layer.update();
